@@ -64,8 +64,8 @@ export default {
           icon: 'mdi-account',
           subItems: [
             {
-              title: 'xxx',
-              to: '/xxx'
+              title: 'Sub',
+              to: '/sub'
             }
           ]
         }

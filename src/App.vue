@@ -53,6 +53,33 @@ export default {
     return {
       drawer: false,
       site: {
+        menu: [
+          {
+            title: 'home',
+            icon: 'mdi-home',
+            subItems: [
+              {
+                title: 'Dashboard',
+                to: '/'
+              },
+              {
+                title: 'About',
+                to: '/about'
+              }
+            ]
+          },
+          {
+            title: 'about',
+            active: true,
+            icon: 'mdi-account',
+            subItems: [
+              {
+                title: 'Sub',
+                to: '/sub'
+              }
+            ]
+          }
+        ],
         title: 'community site created by vue.js code',
         footer: 'Have a good one '
       }
@@ -67,6 +94,7 @@ export default {
         const v = sn.val()
         if (!v) {
           this.$firebase.database().ref().child('site').set(this.site)
+          return
         }
         this.site = v
       }, (e) => {
