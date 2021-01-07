@@ -15,7 +15,7 @@
       <!--app-bar 영역 종료-->
     </v-app-bar><!--e//v-app-bar-->
     <!--네비게이션 시작-->
-     <v-navigation-drawer app v-model="drawer">
+     <v-navigation-drawer app v-model="drawer" width="400">
       <site-nav :items="site.menu"></site-nav> <!--여기에서 서브메뉴 컴포넌트로 선언됨-->
     </v-navigation-drawer>
     <!--네이게이션 영역 종료-->
